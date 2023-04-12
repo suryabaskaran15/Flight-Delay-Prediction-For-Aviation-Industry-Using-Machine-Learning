@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Registration Page</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='/main.css')}}" type="text/css">
+</head>
+<body>
+    <h1>Predict your flight delay chances</h1>
+
+        <form action="/predict" method="POST">
+            <label>Month of Travel</label>
+            <input type="number" name="month" id="month" placeholder="Month of Travel">
+
+            <label>Travel day of Month</label>
+            <input type="number" name="day" id="day" placeholder="Enter day of month ">
+
+            <label>Scheduled Departure</label>
+            <input type="number" name="schdl_dep" id="schdl_dep" placeholder="Enter the time of scheduled departure">
+
+            <label>Delay in Departure</label>
+            <input type="number" name="dep_delay" id="dep_delay" placeholder="Enter the delay in departure" step=".01">
+
+            <label>Scheduled Arrival time</label>
+            <input type="number" name="schdl_arriv" id="schdl_arriv" placeholder="Enter the time of scheduled arrival">
+
+            <label>Was the flight diverted?</label>
+            <input type="number" name="divrtd" id="divrtd" placeholder="Whether the flight was diverted?">
+
+            <label>Was the flight cancelled?</label>
+            <input type="number" name="cancld" id="cancld" placeholder="Whether the flight was cancelled?">
+
+            <label>Delay due to air system</label>
+            <input type="number" name="air_sys_delay" id="air_sys_delay"placeholder="Delay due to air system" step=".01">
+
+            <label>Delay due to security</label>
+            <input type="number" name="secrty_delay" id="secrty_delay" placeholder="Delay due to security" step=".01">
+
+            <label>Delay due to Airline</label>
+            <input type="number" name="airline_delay" id="airline_delay" placeholder="Delay due to Airline" step=".01">
+
+            <label>Delay due to late aircraft</label>
+            <input type="number" name="late_air_delay" id="late_air_delay"placeholder="Delay due to late aircraft" step=".01">
+
+            <label>Delay due to weather</label>
+            <input type="number" name="wethr_delay" id="wethr_delay"placeholder="Delay due to weather" step=".01">
+
+
+            <input type="submit" value="Predict" class="sbt_btn">
+        </form>
+</body>
+</html>
